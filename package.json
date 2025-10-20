@@ -2,12 +2,14 @@
   "name": "radiotedu-classical-player",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://senin-adin.github.io/radiotedu-classical-player",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "start": "vite"
+    "start": "vite",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.542.0",
@@ -18,6 +20,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10",
     "vite": "^5.4.2"

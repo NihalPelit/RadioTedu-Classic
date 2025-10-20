@@ -11,7 +11,10 @@ import Crossfader from './components/Crossfader'
 export default function App() {
   // Visual backgrounds list; can expand easily
   // Add new visual assets here (ensure files exist in /public)
-  const visuals = ['/video.mp4', '/classical.mp4', '/VHS_Cassette_Player_Loop_Generation.mp4']
+  const visuals = [import.meta.env.BASE_URL + 'video.mp4',
+    import.meta.env.BASE_URL + 'classical.mp4',
+    import.meta.env.BASE_URL + 'VHS_Cassette_Player_Loop_Generation.mp4']
+    
   const [visualIndex, setVisualIndex] = useState(0)
   const [showLove, setShowLove] = useState(false)
   const[showNatureSounds,setShowNatureSounds]= useState(false)

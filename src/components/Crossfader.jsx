@@ -1,4 +1,5 @@
 import React from 'react'
+import { RotateCcw } from 'lucide-react'
 
 export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
   const handleCrossfaderChange = (e) => {
@@ -6,8 +7,13 @@ export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
     setCrossfaderValue(value)
   }
 
+  // Reset fonksiyonu - slider'ı %50'ye getirir
+  const resetToCenter = () => {
+    setCrossfaderValue(50)
+  }
+
   // Yüzde hesaplamaları
-  const musicPercentage = 100-crossfaderValue
+  const musicPercentage = 100 - crossfaderValue
   const naturePercentage = crossfaderValue
 
   return (
@@ -38,6 +44,17 @@ export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
         <span className="crossfader-percentage music">
           {musicPercentage}%
         </span>
+        
+        {/* Reset Button - Yüzdelerin ortasında */}
+        <button 
+          onClick={resetToCenter}
+          className="crossfader-reset-btn"
+          title="Reset to 50/50"
+        >
+          <RotateCcw size={12} />
+          <span className="reset-text">reset</span>
+        </button>
+        
         <span className="crossfader-percentage nature">
           {naturePercentage}%
         </span>

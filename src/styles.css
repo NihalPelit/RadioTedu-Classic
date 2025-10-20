@@ -249,6 +249,7 @@ body {
   position: relative;
   animation: fade-in 0.3s ease;
   margin-top: 8px;
+  
 }
 
 /* Kapatma Butonu */
@@ -533,6 +534,88 @@ body {
   color: var(--glow-ui);
   border-color: rgba(185, 141, 205, 0.257);
 }
+
+/* Reset Button - Yüzdelerin ortasında kompakt versiyon */
+.crossfader-reset-btn {
+  padding: 4px 8px;
+  background: rgba(44, 42, 74, 0.5);
+  backdrop-filter: blur(3px) saturate(140%);
+  border: 1px solid var(--icon-color);
+  border-radius: 6px;
+  color: var(--glow-ui);
+  font-family: 'VT323', monospace;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(209, 209, 248, 0.15);
+  white-space: nowrap;
+}
+
+.crossfader-reset-btn:hover {
+  background: rgba(44, 42, 74, 0.7);
+  border-color: var(--glow-ui);
+  box-shadow: 0 0 10px rgba(209, 209, 248, 0.3);
+  transform: scale(1.05);
+}
+
+.crossfader-reset-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 6px rgba(209, 209, 248, 0.2);
+}
+
+/* İkon animasyonu */
+.crossfader-reset-btn:hover svg {
+  animation: rotate-icon 0.5s ease;
+}
+
+@keyframes rotate-icon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Reset text - mobilde gizlenebilir */
+.reset-text {
+  display: inline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .crossfader-reset-btn {
+    padding: 4px 6px;
+    font-size: 10px;
+    gap: 3px;
+  }
+  
+  .crossfader-reset-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+  
+  /* Mobilde sadece ikon göster */
+  .reset-text {
+    display: none;
+  }
+}
+
+/* Percentage Display - flex ayarı güncellendi */
+.crossfader-percentages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2px;
+  gap: 8px;
+}
+
+
+
 
 
 /* Responsive */

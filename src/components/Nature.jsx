@@ -37,13 +37,13 @@ export default function Nature({ showNatureSounds, setShowNatureSounds, crossfad
 
   // Ses dosyalarının yolları
   const soundPaths = {
-    rain: '/sounds/rain.mp3',
-    fire: '/sounds/fire.mp3',
-    wind: '/sounds/wind.mp3',
-    ocean: '/sounds/ocean.mp3',
-    birds: '/sounds/birds.mp3',
-    thunder: '/sounds/thunder.mp3',
-    crickets: '/sounds/crickets.mp3'
+    rain: import.meta.env.BASE_URL + 'sounds/rain.mp3',
+    fire: import.meta.env.BASE_URL + 'sounds/fire.mp3',
+    wind: import.meta.env.BASE_URL + 'sounds/wind.mp3',
+    ocean: import.meta.env.BASE_URL + 'sounds/ocean.mp3',
+    birds: import.meta.env.BASE_URL + 'sounds/birds.mp3',
+    thunder: import.meta.env.BASE_URL + 'sounds/thunder.mp3',
+    crickets: import.meta.env.BASE_URL + 'sounds/crickets.mp3'
   }
 
   // Ses elementlerini oluştur
