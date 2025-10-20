@@ -2,13 +2,14 @@
   "name": "radiotedu-classical-player",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://senin-adin.github.io/radiotedu-classical-player",
+  
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "start": "vite",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
