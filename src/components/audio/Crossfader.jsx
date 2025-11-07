@@ -1,20 +1,25 @@
+/**
+ * Crossfader Component (Refactored)
+ * Müzik ve nature ses karıştırıcı
+ */
+
 import React from 'react'
 import { RotateCcw } from 'lucide-react'
+import { calculateCrossfaderPercentages } from '../../hooks'
+import { DEFAULT_CROSSFADER_VALUE } from '../../constants'
 
 export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
-  const handleCrossfaderChange = (e) => {
+  const handleChange = (e) => {
     const value = parseInt(e.target.value)
     setCrossfaderValue(value)
   }
 
-  // Reset fonksiyonu - slider'ı %50'ye getirir
   const resetToCenter = () => {
-    setCrossfaderValue(50)
+    setCrossfaderValue(DEFAULT_CROSSFADER_VALUE)
   }
 
-  // Yüzde hesaplamaları
-  const musicPercentage = 100 - crossfaderValue
-  const naturePercentage = crossfaderValue
+  // Yüzdeleri hesapla
+  const { music, nature } = calculateCrossfaderPercentages(crossfaderValue)
 
   return (
     <div className="crossfader-container">
@@ -24,14 +29,14 @@ export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
         <span className="crossfader-label right">Just Nature</span>
       </div>
       
-      {/* Crossfader Slider */}
+      {/* Slider */}
       <div className="crossfader-slider-wrapper">
         <input
           type="range"
           min="0"
           max="100"
           value={crossfaderValue}
-          onChange={handleCrossfaderChange}
+          onChange={handleChange}
           className="crossfader-slider"
         />
         
@@ -39,13 +44,12 @@ export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
         <div className="crossfader-center-mark"></div>
       </div>
       
-      {/* Percentage Display */}
+      {/* Percentages and Reset */}
       <div className="crossfader-percentages">
         <span className="crossfader-percentage music">
-          {musicPercentage}%
+          {music}%
         </span>
         
-        {/* Reset Button - Yüzdelerin ortasında */}
         <button 
           onClick={resetToCenter}
           className="crossfader-reset-btn"
@@ -56,7 +60,7 @@ export default function Crossfader({ crossfaderValue, setCrossfaderValue }) {
         </button>
         
         <span className="crossfader-percentage nature">
-          {naturePercentage}%
+          {nature}%
         </span>
       </div>
     </div>

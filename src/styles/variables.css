@@ -1,0 +1,23 @@
+/**
+ * CSS Variables
+ * Tüm renk ve değişken tanımlamaları
+ */
+
+:root {
+  /* Renk Paleti */
+  --bg-dark: #10101a;
+  --purple-tint: #2c2a4a;
+  --glow-ui: #d1d1f8;
+  --icon-color: #a0a8b5;
+  
+  /* Shadow ve Glow Değerleri */
+  --shadow-glow-light: 0 0 6px rgba(209, 209, 248, 0.8);
+  --shadow-glow-medium: 0 0 12px rgba(209, 209, 248, 0.4);
+  --shadow-glow-heavy: 0 0 18px rgba(209, 209, 248, 0.2);
+  --shadow-icon: 0 0 6px rgba(160, 168, 181, 0.6);
+  
+  /* Geçiş Süreleri */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}

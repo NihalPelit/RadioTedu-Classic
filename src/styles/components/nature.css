@@ -1,0 +1,150 @@
+/**
+ * Nature Sounds Component Styles
+ * Doğa sesleri paneli için stiller
+ */
+
+/* Nature Sounds Panel */
+.nature-sounds-panel {
+  width: 320px;
+  background: rgba(16, 16, 26, 0.75);
+  backdrop-filter: blur(3px) saturate(140%);
+  border: 1px solid var(--icon-color);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: 'VT323', monospace;
+  color: var(--glow-ui);
+  box-shadow: 
+    0 0 10px rgba(209, 209, 248, 0.25), 
+    0 0 24px rgba(44, 42, 74, 0.4);
+  position: relative;
+  animation: fade-in 0.3s ease;
+  margin-top: 8px;
+}
+
+/* Close Button */
+.nature-close-btn {
+  background: transparent;
+  border: 1px solid var(--icon-color);
+  color: var(--icon-color);
+  width: 22px; 
+  height: 22px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.nature-close-btn:hover { 
+  color: var(--glow-ui); 
+  border-color: var(--glow-ui); 
+  background: rgba(209, 209, 248, 0.1); 
+}
+
+/* Sound Item */
+.nature-sound-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(209, 209, 248, 0.1);
+}
+
+.nature-sound-item:last-child {
+  border-bottom: none;
+}
+
+/* Icon Container */
+.nature-icon-container {
+  width: 32px;
+  height: 32px;
+  background: rgba(44, 42, 74, 0.4);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.nature-icon-container:hover {
+  border-color: var(--glow-ui);
+  background: rgba(209, 209, 248, 0.15);
+  box-shadow: 0 0 6px rgba(209, 209, 248, 0.4);
+}
+
+.nature-icon-container.active {
+  background: rgba(209, 209, 248, 0.2);
+  border-color: var(--glow-ui);
+  box-shadow: 
+    0 0 12px rgba(209, 209, 248, 0.6), 
+    0 0 20px rgba(209, 209, 248, 0.3);
+  color: var(--glow-ui);
+}
+
+/* Sound Label */
+.nature-label {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  opacity: 0.9;
+}
+
+/* Slider Container */
+.nature-slider-container {
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Nature Slider */
+.nature-slider {
+  width: 90px;
+  height: 7px;
+  background: rgba(44, 42, 74, 0.6);
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.nature-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--glow-ui);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(209, 209, 248, 0.6);
+  transition: all 0.25s ease;
+}
+
+.nature-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 8px rgba(209, 209, 248, 0.8);
+  transform: scale(1.1);
+}
+
+.nature-slider:hover {
+  background: rgba(44, 42, 74, 0.8);
+}
+
+/* Volume Percentage */
+.nature-volume {
+  font-size: 11px;
+  font-family: 'VT323', monospace;
+  color: var(--icon-color);
+  width: 24px;
+  text-align: right;
+}

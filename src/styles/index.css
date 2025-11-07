@@ -1,0 +1,16 @@
+/**
+ * Main Styles Index
+ * Tüm stil dosyalarını birleştirir
+ */
+
+/* Variables (En önce yüklenmeli) */
+@import './variables.css';
+
+/* Global Styles */
+@import './globals.css';
+
+/* Component Styles */
+@import './components/player.css';
+@import './components/pomodoro.css';
+@import './components/nature.css';
+@import './components/crossfader.css';

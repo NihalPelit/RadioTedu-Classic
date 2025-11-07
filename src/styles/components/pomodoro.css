@@ -1,0 +1,113 @@
+/**
+ * Pomodoro Component Styles
+ * Pomodoro zamanlayıcı için stiller
+ */
+
+/* Pomodoro Panel */
+.pomodoro-panel {
+  width: 200px;
+  background: rgba(16, 16, 26, 0.72);
+  backdrop-filter: blur(3px) saturate(140%);
+  border: 1px solid var(--icon-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'VT323', monospace;
+  color: var(--glow-ui);
+  box-shadow: 
+    0 0 10px rgba(209, 209, 248, 0.25), 
+    0 0 24px rgba(44, 42, 74, 0.4);
+  position: relative;
+  animation: fade-in 0.3s ease;
+}
+
+@media (max-width: 520px) {
+  .pomodoro-panel { 
+    width: 180px; 
+    padding: 8px 10px; 
+  }
+}
+
+/* Pomodoro Toggle Button */
+.pomodoro-toggle {
+  background: rgba(16, 16, 26, 0.6);
+  border: 1px solid var(--icon-color);
+  color: var(--glow-ui);
+  padding: 8px 10px;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  backdrop-filter: blur(3px) saturate(140%);
+  transition: var(--transition-normal);
+  box-shadow: 0 0 6px rgba(209, 209, 248, 0.4);
+}
+
+.pomodoro-toggle:hover { 
+  border-color: var(--glow-ui); 
+  box-shadow: 0 0 10px rgba(209, 209, 248, 0.7); 
+}
+
+/* Icon Button */
+.pomodoro-panel .icon-btn {
+  background: transparent;
+  border: 1px solid var(--icon-color);
+  color: var(--icon-color);
+  width: 20px; 
+  height: 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.pomodoro-panel .icon-btn:hover { 
+  color: var(--glow-ui); 
+  border-color: var(--glow-ui); 
+  background: rgba(209, 209, 248, 0.1); 
+}
+
+/* Mode Chip */
+.mode-chip {
+  background: rgba(44, 42, 74, 0.35);
+  border: 1px solid var(--icon-color);
+  padding: 2px 6px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.mode-chip.active { 
+  background: rgba(209, 209, 248, 0.15); 
+  border-color: var(--glow-ui); 
+  color: var(--glow-ui); 
+  box-shadow: 0 0 8px rgba(209, 209, 248, 0.4); 
+}
+
+.mode-chip:hover { 
+  border-color: var(--glow-ui); 
+  color: var(--glow-ui); 
+}
+
+/* Control Button */
+.control-btn {
+  background: rgba(44, 42, 74, 0.35);
+  border: 1px solid var(--icon-color);
+  color: var(--glow-ui);
+  width: 26px; 
+  height: 26px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 4px rgba(209, 209, 248, 0.3);
+}
+
+.control-btn:hover { 
+  border-color: var(--glow-ui); 
+  background: rgba(209, 209, 248, 0.15); 
+  box-shadow: 0 0 8px rgba(209, 209, 248, 0.5); 
+}

@@ -1,0 +1,82 @@
+/**
+ * Player Component Styles
+ * Müzik çalar için stiller
+ */
+
+/* Icon Styling */
+.icon-glow {
+  color: var(--icon-color);
+  filter: drop-shadow(var(--shadow-icon));
+  transition: var(--transition-normal);
+}
+
+.icon-glow:hover {
+  color: var(--glow-ui);
+  filter: drop-shadow(0 0 10px rgba(209, 209, 248, 0.8));
+  transform: scale(1.1);
+}
+
+/* Volume Bar Styling */
+.volume-bar {
+  width: 6px;
+  height: 20px;
+  background: var(--icon-color);
+  box-shadow: 
+    0 0 4px rgba(160, 168, 181, 0.6),
+    inset 0 0 2px rgba(209, 209, 248, 0.3);
+  border-radius: 1px;
+  transition: var(--transition-fast);
+}
+
+.volume-bar:hover {
+  background: var(--glow-ui);
+  box-shadow: 
+    0 0 8px rgba(209, 209, 248, 0.8),
+    inset 0 0 4px rgba(209, 209, 248, 0.5);
+  transform: scaleY(1.1);
+}
+
+.volume-bar.active {
+  background: var(--glow-ui);
+  box-shadow: 
+    0 0 8px rgba(209, 209, 248, 0.8),
+    inset 0 0 4px rgba(209, 209, 248, 0.5);
+}
+
+/* Player Controls */
+.player-control {
+  background: transparent;
+  border: 1px solid var(--icon-color);
+  color: var(--icon-color);
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: var(--transition-normal);
+  font-family: 'VT323', monospace;
+  filter: drop-shadow(0 0 4px rgba(160, 168, 181, 0.4));
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .player-control {
+    padding: 8px;
+    min-width: 36px;
+    height: 36px;
+  }
+}
+
+.player-control:hover {
+  border-color: var(--glow-ui);
+  color: var(--glow-ui);
+  background: rgba(209, 209, 248, 0.1);
+  filter: drop-shadow(0 0 8px rgba(209, 209, 248, 0.6));
+}
+
+.player-control.active {
+  background: rgba(209, 209, 248, 0.2);
+  border-color: var(--glow-ui);
+  color: var(--glow-ui);
+}
