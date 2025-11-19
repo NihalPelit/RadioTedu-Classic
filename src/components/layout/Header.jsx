@@ -1,10 +1,10 @@
 /**
  * Header Component
- * Üst kısım - sosyal medya linkleri, butonlar, beta notice
+ * Üst kısım - butonlar, beta notice
  */
 
 import React, { useState, useEffect } from 'react'
-import { FaFacebookF, FaTwitter, FaYoutube, FaHeart, FaHome } from 'react-icons/fa'
+import { FaHome } from 'react-icons/fa'
 import { SOCIAL_LINKS } from '../../constants'
 
 export default function Header({ onChangeVisual, onShowNatureSounds }) {
@@ -38,68 +38,8 @@ export default function Header({ onChangeVisual, onShowNatureSounds }) {
         </button>
       </div>
       
-      {/* Right Side - Social Icons */}
+      {/* Right Side - Beta Notice and Home Button */}
       <div className="flex flex-col items-end gap-1 sm:gap-2">
-        <div className="flex items-center gap-2 sm:gap-4">
-          {/* Social Media Icons */}
-          <div className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl">
-            <a 
-              href={SOCIAL_LINKS.facebook} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="icon-glow"
-            >
-              <FaFacebookF />
-            </a>
-            <a 
-              href={SOCIAL_LINKS.twitter} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="icon-glow"
-            >
-              <FaTwitter />
-            </a>
-            <a 
-              href={SOCIAL_LINKS.youtube} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="icon-glow"
-            >
-              <FaYoutube />
-            </a>
-            <button
-              type="button"
-              onClick={() => setShowLove(true)}
-              aria-label="We love you too"
-              className="icon-glow focus:outline-none"
-            >
-              <FaHeart />
-            </button>
-          </div>
-          
-          {/* Homepage Button */}
-          <a 
-            href={SOCIAL_LINKS.homepage} 
-            target="_blank" 
-            rel="noreferrer" 
-            className="player-control flex items-center gap-2 text-sm"
-            title="Visit RadioTEDU Homepage"
-          >
-            <FaHome size={14} />
-            <span className="hidden sm:inline">Home</span>
-          </a>
-        </div>
-
-        {/* Love Message */}
-        {showLove && (
-          <div 
-            className="mt-1 text-pink-300 text-[11px] sm:text-xs tracking-wide flex items-center gap-1 animate-pulse" 
-            style={{textShadow:'0 0 6px rgba(255,192,203,0.7)'}}
-          >
-            <span className="inline-block">we love you too!</span>
-            <span className="pulse-dot">❤</span>
-          </div>
-        )}
 
         {/* Beta Notice */}
         <div className="text-[11px] sm:text-sm leading-snug text-right opacity-90 max-w-[260px] font-mono">

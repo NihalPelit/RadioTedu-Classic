@@ -10,6 +10,8 @@
 @import './globals.css';
 
 /* Component Styles */
+@import './components/navbar.css';
+@import './components/footer.css';
 @import './components/player.css';
 @import './components/pomodoro.css';
 @import './components/nature.css';
